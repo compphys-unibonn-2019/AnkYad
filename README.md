@@ -1,2 +1,0 @@
-# AnkYad
-ankur's repository
