@@ -70,17 +70,20 @@ void CLT()
   	mean = Avg(Z, N);
   	var = Var(Z, mean, N);
 	Zero(Z,N);
-  	cout << "AVG " << mean << endl;
-  	cout << "Var " << var << endl;
+  	//cout << "AVG " << mean << endl;
+  	//cout << "Var " << var << endl;
 	Gr1->SetPoint(j,n,mean);
 	Gr2->SetPoint(j,n,var);
   }
   Gr1->SetMarkerStyle(3);
+  Gr1->SetTitle("Mean values");
+  Gr2->SetTitle("Variance");
   c1->SetGrid();
   mg->Add(Gr1);
   Gr2->SetMarkerColor(2);
   Gr2->SetMarkerStyle(21);
   mg->Add(Gr2);
   mg->Draw("AP");
+  c1->BuildLegend();
   return 0;
 }
